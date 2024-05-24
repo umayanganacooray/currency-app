@@ -97,11 +97,12 @@ import axios from "axios";
                 </form>
             </section>
         </div>
-        
+        {!loading ? 
         <section className="lg:mx-80 text-xl mt-5" >
             {amountInSourceCurrency} {currencyNames[sourceCurrency]} is equals to{" "}
             <span className="text-blue-500 font-bold">{amountInTargeteCurrency}</span> in {currencyNames[targetCurrency]}
-        </section> 
+        </section>
+        : null} 
      </div> 
    )
  }
